@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@use "../foundation/mixin" as *;
+
+html {
+    font-size: 100%;
+
+}
+
+body {
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: "YuMincho", "Yu Mincho", "游明朝体", "游明朝", serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 50px 0;
+}
+li{
+    list-style: none;
+}
+h1,
+h2,
+.menu,
+.footer-menu {
+    font-family: "Iosevka Charon Mono", monospace;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    border-bottom: 2px solid #000;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1080px;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @include mq-sp {
+        padding: 0 20px;
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 64px;
+
+    &--home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+.home-wrapper {
+    background-image: url(../images/office.jpg);
+    background-size: cover;
+    flex: 1;
+}
+
+.service-wrapper {
+    background-image: url(../images/memo.jpg);
+    background-size: cover;
+    flex: 1;
+}
+
+.contact-wrapper {
+    background-image: url(../images/phone.jpg);
+    background-size: cover;
+    flex: 1;
+}
+
+.pc-only {
+    display: block;
+
+    @include mq-sp {
+        display: none;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

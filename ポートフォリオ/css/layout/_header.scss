@@ -1,0 +1,117 @@
+@use "../foundation/mixin" as *;
+
+.header {
+    background-color: rgba(250, 250, 250, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    &__logo {
+        font-size: 16px;
+
+        @include mq-375 {
+            font-size: 10px;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+
+        @include mq-sp {
+            display: block;
+            position: absolute;
+            top: 16px;
+            right: 8px;
+            cursor: pointer;
+            width: 32px;
+            height: 24px;
+            z-index: 10;
+
+            span {
+                transition: all .3s;
+                position: absolute;
+                height: 2px;
+                background-color: #333;
+                width: 100%;
+                z-index: 10;
+
+                &:nth-child(1) {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 11px;
+                }
+
+                &:nth-child(3) {
+                    bottom: 0;
+                }
+            }
+
+            &.active {
+                span {
+                    &:nth-child(1) {
+                        top: 10px;
+                        transform: translateY(6px) rotate(-45deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(3) {
+                        top: 22px;
+                        transform: translateY(-6px) rotate(45deg);
+                    }
+                }
+            }
+
+        }
+
+        @include mq-375 {
+            top: 8px;
+        }
+
+    }
+
+
+    &__menu ul {
+        list-style: none;
+        display: flex;
+        gap: 96px;
+        align-items: center;
+
+        @include mq-sp {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            display: block;
+            height: 100vh;
+            width: 300px;
+            padding: 32px;
+            background-color: white;
+            transition: all 0.5s;
+
+            &.open {
+                right: 0;
+            }
+        }
+    }
+
+    &__menu li {
+        font-size: 24px;
+
+        @include mq-sp {
+            border-bottom: 1px solid black;
+            line-height: 1.5;
+            margin-bottom: 48px;
+        }
+    }
+
+    .menu-img {
+        width: 39px;
+        height: 39px;
+    }
+
+}

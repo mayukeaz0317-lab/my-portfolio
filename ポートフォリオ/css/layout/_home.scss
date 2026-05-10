@@ -1,0 +1,57 @@
+@use "../foundation/mixin" as *;
+
+.home-img {
+    width: 32px;
+    height: 32px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include mq-sp {
+        flex-direction: column;
+    }
+
+    &__message {
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.5;
+        background-color: rgba(250, 250, 250, 0.6);
+        padding: 32px;
+
+        @include mq-sp {
+            font-size: 16px;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    &__pets {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__cat,
+    &__pet {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 150px;
+        width: 150px;
+    }
+
+    &__cat {
+        margin-left: 64px;
+        margin-bottom: 24px;
+    }
+
+    h3 {
+        margin-bottom: 16px;
+        margin-left: 16px;
+        text-align: left;
+    }
+}

@@ -1,0 +1,11 @@
+
+@mixin mq-sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mq-375 {
+  @media screen and (max-width: 567px) {
+    @content;
+  }
+}

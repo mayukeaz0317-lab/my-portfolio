@@ -1,0 +1,35 @@
+@use "../foundation/mixin" as *;
+
+.footer {
+    text-align: center;
+
+    &__logo {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    &__menu {
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    &__list ul{
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        font-size: 24px;
+        list-style: none;
+
+        @include mq-375 {
+            gap: 32px;
+        }
+    }
+
+}
+
+
+.copyright {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+}
