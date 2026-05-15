@@ -6,7 +6,7 @@
     "enabled": true
   },
   "assets": {
-    "directory": "ポートフォリオ"
+    "directory": "./"
   },
   "compatibility_flags": [
     "nodejs_compat"
