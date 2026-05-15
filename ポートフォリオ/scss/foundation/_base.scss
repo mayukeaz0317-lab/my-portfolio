@@ -7,26 +7,22 @@ html {
 }
 
 body {
-    font-weight: 400;
-    line-height: 1.2;
-    font-family: "YuMincho", "Yu Mincho", "游明朝体", "游明朝", serif;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
+    /* 英語をLatoにし、日本語を綺麗なゴシック体にする設定 */
+    font-family: 'Lato', "Noto Sans JP", "Yu Gothic", "YuGothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
-section {
+
+.l-section {
     padding: 50px 0;
 }
-li{
+
+li {
     list-style: none;
 }
-h1,
-h2,
-.menu,
-.footer-menu {
-    font-family: "Iosevka Charon Mono", monospace;
-    font-weight: 400;
-}
+
 
 a {
     text-decoration: none;
@@ -56,32 +52,8 @@ img {
 .heading {
     text-align: center;
     font-size: 32px;
+    font-weight: bold;
     margin-bottom: 64px;
-
-    &--home {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-    }
-}
-
-.home-wrapper {
-    background-image: url(../images/office.jpg);
-    background-size: cover;
-    flex: 1;
-}
-
-.service-wrapper {
-    background-image: url(../images/memo.jpg);
-    background-size: cover;
-    flex: 1;
-}
-
-.contact-wrapper {
-    background-image: url(../images/phone.jpg);
-    background-size: cover;
-    flex: 1;
 }
 
 .pc-only {

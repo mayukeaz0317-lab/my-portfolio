@@ -1,17 +1,24 @@
 @use "../foundation/mixin" as *;
 
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(250, 250, 250);
+}
 .header {
-    background-color: rgba(250, 250, 250, 0.6);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 0;
 
     &__logo {
-        font-size: 16px;
+        font-size: 24px;
 
-        @include mq-375 {
-            font-size: 10px;
+        @include mq-sp {
+            font-size: 18px;
         }
     }
 
@@ -22,7 +29,7 @@
             display: block;
             position: absolute;
             top: 16px;
-            right: 8px;
+            right: 16px;
             cursor: pointer;
             width: 32px;
             height: 24px;
@@ -69,17 +76,13 @@
 
         }
 
-        @include mq-375 {
-            top: 8px;
-        }
-
     }
 
 
     &__menu ul {
         list-style: none;
         display: flex;
-        gap: 96px;
+        gap: 60px;
         align-items: center;
 
         @include mq-sp {
@@ -92,6 +95,7 @@
             padding: 32px;
             background-color: white;
             transition: all 0.5s;
+            z-index: 1;
 
             &.open {
                 right: 0;
@@ -100,6 +104,7 @@
     }
 
     &__menu li {
+        font-weight: 500;
         font-size: 24px;
 
         @include mq-sp {

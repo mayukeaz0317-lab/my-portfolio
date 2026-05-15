@@ -2,9 +2,11 @@
 
 .footer {
     text-align: center;
+    background-color: #f5f5f5;
 
     &__logo {
         font-size: 24px;
+        font-weight: 700;
         margin-bottom: 32px;
     }
 
@@ -16,7 +18,9 @@
     &__list ul{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 64px;
+        font-weight: 500;
         font-size: 24px;
         list-style: none;
 
