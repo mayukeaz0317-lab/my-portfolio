@@ -31,10 +31,8 @@
         }
     }
 
-    li {
-        a:hover {
-            border-bottom: 1px solid #333;
-        }
+    &__list a:hover {
+        border-bottom: 1px solid #333;
     }
 
 }
