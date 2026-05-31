@@ -13,10 +13,12 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    letter-spacing: 0.06em;
 }
+
 section {
     /* ヘッダーの高さ分（例：80px）だけ手前で止まるようにする */
-    scroll-margin-top: 30px; 
+    scroll-margin-top: 30px;
 }
 
 .l-section {
@@ -58,7 +60,8 @@ img {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 64px;
-    @include mq-375{
+
+    @include mq-375 {
         margin-bottom: 48px;
     }
 }

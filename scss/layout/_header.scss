@@ -5,7 +5,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(250, 250, 250);
 }
 .header {
@@ -16,6 +16,7 @@ header{
 
     &__logo {
         font-size: 24px;
+
 
         @include mq-sp {
             font-size: 18px;
@@ -95,7 +96,7 @@ header{
             padding: 32px;
             background-color: white;
             transition: all 0.5s;
-            z-index: 1;
+            z-index: 3;
 
             &.open {
                 right: 0;
@@ -105,12 +106,15 @@ header{
 
     &__menu li {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 16px;
+        line-height: 1.4;
 
         @include mq-sp {
+            padding-bottom: 8px;
+            padding-left: 8px;
             border-bottom: 1px solid black;
-            line-height: 1.5;
             margin-bottom: 48px;
+            font-size: 15px;
         }
     }
 

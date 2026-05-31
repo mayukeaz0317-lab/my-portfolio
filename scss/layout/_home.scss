@@ -15,13 +15,10 @@
     }
 
     &__message {
-        font-size: 20px;
-        line-height: 1.5;
+        font-size: 16px;
+        line-height: 1.8;
         padding-bottom: 32px;
 
-        @include mq-sp {
-            font-size: 16px;
-        }
     }
 
     &__name {

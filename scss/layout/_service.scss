@@ -2,7 +2,8 @@
 
 .service {
     &__message {
-        font-size: 20px;
+        font-size: 16px;
+        line-height: 1.8;
 
     }
 }
@@ -40,8 +41,11 @@
     }
 
     &__title {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
         margin-top: 10px;
+        @include mq-sp{
+            font-size: 16px;
+        }
     }
 }

@@ -1,13 +1,14 @@
 .contact {
     &__message {
+        font-size: 16px;
+        line-height: 1.8;
         text-align: center;
-        font-size: 20px;
-        margin-bottom: 64px;
+        margin-bottom: 32px;
     }
 
     &__form {
         max-width: 600px;
-        margin: 16px auto;
+        margin: 0 auto;
         padding: 48px 24px;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 12px;
