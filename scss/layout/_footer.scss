@@ -13,7 +13,8 @@
 
     &__menu {
         margin: 0 auto;
-        padding: 50px 0;
+        padding-top: 50px;
+        padding-bottom: 40px;
     }
 
     &__list ul {
@@ -31,11 +32,35 @@
         }
     }
 
-    &__list a:hover {
-        border-bottom: 1px solid #333;
+    &__list {
+        @media (hover: hover) and (pointer: fine) {
+            a:hover {
+                border-bottom: 1px solid #333;
+            }
+        }
     }
 
 }
+
+.sns {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        padding-bottom: 24px;
+    }
+
+    &__link {
+        display: block;
+    }
+
+}
+
+.fa-brands {
+    font-size: 28px;
+}
+
 
 
 .copyright {

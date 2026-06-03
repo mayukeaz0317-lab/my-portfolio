@@ -1,0 +1,61 @@
+@use "../foundation/mixin" as *;
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__label {
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        margin-bottom: 16px;
+    }
+
+    &__link {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-bottom: 1px solid black;
+            }
+        }
+
+    }
+}
+
+.modal__content {
+    background: #fff;
+
+    width: min(90%, 600px);
+
+    padding: 40px;
+
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+
+    top: 0;
+    right: 10px;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.is-fixed {
+    overflow: hidden;
+}

@@ -120,8 +120,13 @@ header {
         }
     }
 
-    &__menu a:hover {
-        border-bottom: 1px solid #333;
+    &__menu {
+        @media (hover: hover) and (pointer: fine) {
+          a:hover {
+            border-bottom: 1px solid #333;
+          }
+        }
+    }
     }
 
     .menu-img {

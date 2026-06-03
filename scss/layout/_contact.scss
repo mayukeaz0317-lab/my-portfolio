@@ -67,8 +67,10 @@
         transition: background-color 0.3s;
     }
 
-    button[type="submit"]:hover {
-        background-color: #555;
+    @media (hover: hover) and (pointer: fine) {
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
     }
 
 }

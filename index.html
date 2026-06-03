@@ -8,14 +8,10 @@
     <meta name="description" content="平松慶太のポートフィリオ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script src="js/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,14 +36,14 @@
                         <ul>
                             <li><a href="#about">About</a></li>
                             <li><a href="#service">Service</a></li>
-                            <li><a href="#archive">Works</a></li>
+                            <li><a href="#works">Works</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
-        <main>
+        <main id="mainContent">
             <section class="fv">
                 <div class="fv__inner">
                     <div class="fv__item">
@@ -104,45 +100,49 @@
                         また、WordPressではオリジナルテーマの制作から既存テーマを活用したサイト構築まで、幅広く対応しております。</p>
                 </div>
             </section>
-            <section class="archive l-section" id="archive">
+            <section class="works l-section" id="works">
                 <div class="container">
                     <h2 class="heading">Works</h2>
-                    <ul class="archive__items">
-                        <li class="archive__item">
-                            <a href="https://lp.mpluskenchikukobo.com/">
-                                <div class="archive__img">
+                    <ul class="works__list">
+                        <li class="works__item">
+                            <button type="button" class="works__card" data-title=" ミュージックスクール" data-label="自主制作  架空サイト" data-description="BEMを採用し、命名規則の統一による保守性・再利用性を意識したコーディングを行いました。また、静的コーディングからWordPress化まで一貫して担当し、ループ処理やテンプレートの共通化による効率的なコンテンツ管理を実装しています。お問い合わせフォームにはContact Form 7を導入し、静的サイトで再現したデザインやUIを維持しながらWordPressへ組み込むことで、デザイン性と運用性を両立しています。"
+                                data-url="https://lp.mpluskenchikukobo.com/">
+                                <div class="works__img">
                                     <img src="images/screenshot.jpg" alt="ミュージックスクールのホームページのファーストビュー" width="400"
                                         height="250" loading="lazy" decoding="async">
                                 </div>
-                                <h3 class="archive__title">ミュージックスクール</h3>
-                            </a>
+                                <h3 class="works__title">ミュージックスクール</h3>
+                            </button>
                         </li>
-                        <li class="archive__item">
-                            <a href="https://pon-design-2ti.pages.dev/" class="work-card">
-                                <div class="archive__img">
+                        <li class="works__item">
+                            <button type="button" class="works__card" data-title="Web制作会社" data-label="自主制作  架空サイト" data-description="FLOCSSを採用し、レイアウト・コンポーネント・ユーティリティごとに責務を分離することで、再利用性・保守性を考慮したCSS設計を行いました。また、ハンバーガーメニューやナビゲーションには適切なセマンティックHTMLとARIA属性を採用し、アクセシビリティにも配慮しています。JavaScriptではaria-expandedの状態管理に加え、メニュー展開時のフォーカス移動、フォーカストラップ、Escキーによる閉鎖、閉鎖後のフォーカス復帰、背景スクロールの制御を実装し、キーボード操作のみでも快適に利用できるナビゲーションを構築しました。"
+                                data-url="https://pon-design-2ti.pages.dev/">
+                                <div class="works__img">
                                     <img src="images/pon-design.jpg" alt="Web制作会社ののホームページのトップページ" width="923"
                                         height="531" loading="lazy" decoding="async">
                                 </div>
-                                <h3 class="archive__title">Web制作会社</h3>
-                            </a>
+                                <h3 class="works__title">Web制作会社</h3>
+                            </button>
                         </li>
-                        <li class="archive__item">
-                            <a href="https://building-company.pages.dev/" class="work-card">
-                                <div class="archive__img">
+                        <li class="works__item">
+                            <button type="button" class="works__card" data-title="建築会社" data-label="自主制作  架空サイト" data-description="ファーストビューのスライドショーの実装、マイナスマージンによる違和感のない要素の重なるレイアウトを取り入れました。"
+                                data-url="https://building-company.pages.dev/">
+                                <div class="works__img">
                                     <img src="images/building-company.jpg" alt="建築会社のホームページのファーストビュー" width="400"
                                         height="250" loading="lazy" decoding="async">
                                 </div>
-                                <h3 class="archive__title">建築会社</h3>
-                            </a>
+                                <h3 class="works__title">建築会社</h3>
+                            </button>
                         </li>
-                        <li class="archive__item">
-                            <a href="https://animal-hospital.pages.dev/" class="work-card">
-                                <div class="archive__img">
+                        <li class="works__item">
+                            <button type="button" class="works__card" data-title="動物病院" data-label="自主制作  架空サイト" data-description="学習初期の制作物ですが、デザインカンプの再現性を重視し、ピクセル単位でレイアウトや余白を調整しながら実装しました。また、スマートフォンからデスクトップまでの表示崩れが発生しないようレスポンシブ対応を行い、コーディングの基礎力向上を目的として制作しました。"
+                                data-url="https://animal-hospital.pages.dev/">
+                                <div class="works__img">
                                     <img src="images/animal-hospital.jpg" alt="動物病院のホームページのファーストビュー" width="400"
                                         height="250" loading="lazy" decoding="async">
                                 </div>
-                                <h3 class="archive__title">動物病院</h3>
-                            </a>
+                                <h3 class="works__title">動物病院</h3>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -182,16 +182,44 @@
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#service">Service</a></li>
-                        <li><a href="#archive">Works</a></li>
+                        <li><a href="#works">Works</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
+            <ul class="sns__list">
+                <li class="sns__item">
+                    <a href="https://x.com/@bws3YBDjqq6161" target="_blank" rel="noopener noreferrer" class="sns__link"
+                        aria-label="Xのアカウント">
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                    </a>
+                </li>
+                <li class="sns__item">
+                    <a href="https://github.com/mayukeaz0317-lab" target="_blank" rel="noopener noreferrer"
+                        class="sns__link" aria-label="githubのアカウント">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="copyright">
             <p>&copy; 2026 Keita Hiramatsu.</p>
         </div>
     </footer>
+    <div class="modal" id="worksModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal__content">
+            <button type="button" class="modal__close" aria-label="モーダルを閉じる">×</button>
+            <h2 id="modalTitle" class="modal__title"></h2>
+            <p class="modal__label"></p>
+            <p class="modal__description"></p>
+            <a href="" class="modal__link" target="_blank" rel="noopener noreferrer">サイトを見る →</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

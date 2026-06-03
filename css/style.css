@@ -12,6 +12,9 @@ body {
   font-style: normal;
   letter-spacing: 0.06em;
 }
+body.is-fixed {
+  overflow: hidden;
+}
 
 section {
   /* ヘッダーの高さ分（例：80px）だけ手前で止まるようにする */
@@ -179,8 +182,10 @@ header {
     font-size: 15px;
   }
 }
-.header__menu li a:hover {
-  border-bottom: 1px solid #333;
+@media (hover: hover) and (pointer: fine) {
+  .header__menu a:hover {
+    border-bottom: 1px solid #333;
+  }
 }
 .header .menu-img {
   width: 39px;
@@ -199,7 +204,8 @@ header {
 }
 .footer__menu {
   margin: 0 auto;
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 .footer__list ul {
   display: flex;
@@ -216,8 +222,22 @@ header {
     gap: 32px;
   }
 }
-.footer li a:hover {
+.footer__list a:hover {
   border-bottom: 1px solid #333;
+}
+
+.sns__list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding-bottom: 24px;
+}
+.sns__link {
+  display: block;
+}
+
+.fa-brands {
+  font-size: 28px;
 }
 
 .copyright {
@@ -273,44 +293,50 @@ header {
   line-height: 1.8;
 }
 
-.archive {
+.works {
   background-color: #f5f5f5;
 }
-.archive__items {
+.works__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px 32px;
 }
 @media screen and (max-width: 768px) {
-  .archive__items {
+  .works__list {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
 }
-.archive__item {
+.works__item {
   background-color: #FFF;
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  text-align: left;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
-.archive__item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .works__item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  .works__item:hover .works__img::before {
+    opacity: 1;
+  }
+  .works__item:hover .works__img::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  .works__item:hover .works__img {
+    transform: scale(1.04);
+  }
 }
-.archive__item:hover .archive__img::before {
-  opacity: 1;
+.works__card {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.archive__item:hover .archive__img::after {
-  opacity: 1;
-  transform: translate(-50%, -50%) translateY(0);
-}
-.archive__item:hover .archive__img {
-  transform: scale(1.04);
-}
-.archive__img {
+.works__img {
   width: 100%;
   aspect-ratio: 458/290;
   border-radius: 8px;
@@ -318,14 +344,14 @@ header {
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
-.archive__img img {
+.works__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.archive__img::before {
+.works__img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -337,7 +363,7 @@ header {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.archive__img::after {
+.works__img::after {
   content: "詳しく見る →";
   position: absolute;
   top: 50%;
@@ -352,14 +378,15 @@ header {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.archive__title {
+.works__title {
   font-size: 16px;
   font-weight: 700;
   margin-top: 14px;
   color: #1a1a1a;
+  text-align: left;
 }
 @media screen and (max-width: 768px) {
-  .archive__title {
+  .works__title {
     font-size: 15px;
   }
 }
@@ -504,4 +531,50 @@ header {
     font-size: 24px;
     margin-bottom: 15px;
   }
+}
+.modal.is-open {
+  display: flex;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal__title {
+  margin-bottom: 12px;
+}
+.modal__label {
+  margin-bottom: 12px;
+}
+.modal__description {
+  margin-bottom: 16px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .modal__link:hover {
+    border-bottom: 1px solid black;
+  }
+}
+
+.modal__content {
+  background: #fff;
+  width: min(90%, 600px);
+  padding: 40px;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.is-fixed {
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

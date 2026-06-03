@@ -32,4 +32,138 @@ $(function () {
 
     // タイマーセット
     setInterval(moveSlide, interval);
-})
+
+
+    let lastFocusedElement = null;
+
+    function closeModal() {
+
+        $('#worksModal').removeClass('is-open');
+
+        $('body').removeClass('is-fixed');
+
+        // 背景を再度操作可能にする
+        $('#mainContent').removeAttr('inert');
+
+        // 元いた要素へフォーカスを戻す
+        if (lastFocusedElement) {
+            $(lastFocusedElement).trigger('focus');
+        }
+
+    }
+
+    function openModal(title, label, description, url) {
+
+        $('.modal__title').text(title);
+
+        $('.modal__label').text(label);
+
+        $('.modal__description').text(description);
+
+        $('.modal__link').attr('href', url);
+
+        $('#worksModal').addClass('is-open');
+
+        $('body').addClass('is-fixed');
+
+        // 背景を操作不可にする
+        $('#mainContent').attr('inert', '');
+
+        // モーダル内の最初の要素へフォーカス
+        $('.modal__close').trigger('focus');
+
+    }
+
+    $('.works__card').on('click', function () {
+
+        // フォーカス復帰用
+        lastFocusedElement = this;
+
+        const title = $(this).data('title');
+        const label = $(this).data('label');
+        const description = $(this).data('description');
+        const url = $(this).data('url');
+
+        openModal(
+            title,
+            label,
+            description,
+            url
+        );
+
+    });
+
+    $('.modal__close').on('click', function () {
+        closeModal();
+    });
+
+    $('#worksModal').on('click', function (e) {
+
+        if ($(e.target).is('#worksModal')) {
+            closeModal();
+        }
+
+    });
+
+    $(document).on('keydown', function (e) {
+
+        if (e.key !== 'Escape') return;
+
+        const isOpen =
+            $('#worksModal').hasClass('is-open');
+
+        if (!isOpen) return;
+
+        closeModal();
+
+    });
+
+    /**
+     * Focus Trap
+     */
+    $(document).on('keydown', function (e) {
+
+        const isOpen =
+            $('#worksModal').hasClass('is-open');
+
+        if (!isOpen) return;
+
+        if (e.key !== 'Tab') return;
+
+        const focusableElements = [
+            $('.modal__close').get(0),
+            $('.modal__link').get(0)
+        ];
+
+        const currentIndex =
+            focusableElements.indexOf(document.activeElement);
+
+        if (currentIndex === -1) return;
+
+        e.preventDefault();
+
+        let nextIndex;
+
+        if (e.shiftKey) {
+
+            nextIndex =
+                currentIndex === 0
+                    ? focusableElements.length - 1
+                    : currentIndex - 1;
+
+        } else {
+
+            nextIndex =
+                currentIndex === focusableElements.length - 1
+                    ? 0
+                    : currentIndex + 1;
+
+        }
+
+        focusableElements[nextIndex].focus();
+
+
+
+
+    });
+});
