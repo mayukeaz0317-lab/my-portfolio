@@ -27,7 +27,7 @@
         line-height: 1.5;
         list-style: none;
 
-        @include mq-375 {
+        @include mq-567 {
             gap: 32px;
         }
     }

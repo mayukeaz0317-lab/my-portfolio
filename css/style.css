@@ -11,6 +11,7 @@ body {
   font-weight: 300;
   font-style: normal;
   letter-spacing: 0.06em;
+  text-wrap: pretty;
 }
 body.is-fixed {
   overflow: hidden;
@@ -562,13 +563,11 @@ header {
 }
 .modal__link {
   display: inline-flex;
-  align-items: center;
   padding: 12px 20px;
   border-radius: 999px;
   background: #111;
   color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 @media (hover: hover) and (pointer: fine) {
   .modal__link:hover {
@@ -582,6 +581,11 @@ header {
   position: relative;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 567px) {
+  .modal__content {
+    padding: 20px;
+  }
 }
 .modal__close {
   position: absolute;

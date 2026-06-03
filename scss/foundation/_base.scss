@@ -14,6 +14,7 @@ body {
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.06em;
+    text-wrap: pretty;
     &.is-fixed{
         overflow: hidden;
     }
@@ -61,7 +62,7 @@ img {
     font-weight: bold;
     margin-bottom: 64px;
 
-    @include mq-375 {
+    @include mq-567 {
         margin-bottom: 48px;
     }
 }
