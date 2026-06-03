@@ -187,7 +187,8 @@ header {
     border-bottom: 1px solid #333;
   }
 }
-.header .menu-img {
+
+.menu-img {
   width: 39px;
   height: 39px;
 }
@@ -222,8 +223,10 @@ header {
     gap: 32px;
   }
 }
-.footer__list a:hover {
-  border-bottom: 1px solid #333;
+@media (hover: hover) and (pointer: fine) {
+  .footer__list a:hover {
+    border-bottom: 1px solid #333;
+  }
 }
 
 .sns__list {
@@ -448,8 +451,10 @@ header {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.contact button[type=submit]:hover {
-  background-color: #555;
+@media (hover: hover) and (pointer: fine) {
+  .contact button[type=submit]:hover {
+    background-color: #555;
+  }
 }
 
 .fv {
@@ -552,21 +557,32 @@ header {
   margin-bottom: 12px;
 }
 .modal__description {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+.modal__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 @media (hover: hover) and (pointer: fine) {
   .modal__link:hover {
-    border-bottom: 1px solid black;
+    transform: translateY(-2px);
   }
 }
-
 .modal__content {
   background: #fff;
   width: min(90%, 600px);
   padding: 40px;
   position: relative;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
-
 .modal__close {
   position: absolute;
   top: 0;
