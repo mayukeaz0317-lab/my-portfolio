@@ -619,8 +619,8 @@ header {
   position: absolute;
   inset: 0;
   outline: none;
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
   opacity: 0;
 }
 
