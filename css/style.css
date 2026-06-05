@@ -589,10 +589,14 @@ header {
 }
 .modal__close {
   position: absolute;
+  color: #111;
   top: 0;
   right: 10px;
   font-size: 48px;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .is-fixed {
