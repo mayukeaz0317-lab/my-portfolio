@@ -69,9 +69,6 @@ $(function () {
         // 背景を操作不可にする
         $('#mainContent').attr('inert', '');
 
-        // モーダル内の最初の要素へフォーカス
-        $('.modal__close').trigger('focus');
-
     }
 
     $('.works__card').on('click', function () {

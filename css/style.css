@@ -615,15 +615,6 @@ header {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.modal-focus-fix {
-  position: absolute;
-  inset: 0;
-  outline: none;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
-
 .is-fixed {
   overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
