@@ -73,6 +73,10 @@
         width: 30px;
         height: 30px;
         cursor: pointer;
+        outline: none;
+        &:focus-visible{
+            outline: 2px solid -webkit-focus-ring-color;
+        }
         &::before,
         &::after {
             content: "";

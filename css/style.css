@@ -594,6 +594,10 @@ header {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  outline: none;
+}
+.modal__close:focus-visible {
+  outline: 2px solid -webkit-focus-ring-color;
 }
 .modal__close::before, .modal__close::after {
   content: "";
