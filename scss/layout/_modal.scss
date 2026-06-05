@@ -68,14 +68,30 @@
 
     &__close {
         position: absolute;
-        color: #111;
-        top: 0;
-        right: 10px;
-        font-size: 48px;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
-        -webkit-appearance: none;
-        appearance: none;
-        -webkit-tap-highlight-color: transparent;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 2px;
+            background-color: #111;
+
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
     }
 }
 
