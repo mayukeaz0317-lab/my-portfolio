@@ -68,6 +68,7 @@ $(function () {
 
         // 背景を操作不可にする
         $('#mainContent').attr('inert', '');
+        $('.modal__close').trigger('focus');
 
     }
 
@@ -126,6 +127,7 @@ $(function () {
         if (!isOpen) return;
 
         if (e.key !== 'Tab') return;
+
 
         const focusableElements = [
             $('.modal__close').get(0),
