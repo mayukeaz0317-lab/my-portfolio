@@ -566,10 +566,12 @@ header {
 .modal__label {
   margin-bottom: 12px;
 }
-.modal__description {
+.modal__points-title {
+  font-weight: 400;
+}
+.modal__points-list {
   margin-bottom: 24px;
   line-height: 1.8;
-  white-space: pre-wrap;
 }
 .modal__link {
   display: inline-flex;

@@ -52,13 +52,15 @@ $(function () {
 
     }
 
-    function openModal(title, label, description, url) {
+    function openModal(title, label, points, url) {
 
         $('.modal__title').text(title);
 
         $('.modal__label').text(label);
 
-        $('.modal__description').text(description);
+        const html = points.map(point => `<li>${point}</li>`).join('');
+
+        $('.modal__points-list').html(html);
 
         $('.modal__link').attr('href', url);
 
@@ -81,13 +83,13 @@ $(function () {
 
         const title = $(this).data('title');
         const label = $(this).data('label');
-        const description = $(this).data('description');
+        const points = $(this).data('points').split('|')
         const url = $(this).data('url');
 
         openModal(
             title,
             label,
-            description,
+            points,
             url
         );
 
