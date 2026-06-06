@@ -560,6 +560,7 @@ header {
 .modal__description {
   margin-bottom: 24px;
   line-height: 1.8;
+  white-space: pre-wrap;
 }
 .modal__link {
   display: inline-flex;
