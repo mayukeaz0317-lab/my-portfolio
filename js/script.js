@@ -68,7 +68,11 @@ $(function () {
 
         // 背景を操作不可にする
         $('#mainContent').attr('inert', '');
-        $('.modal__close').trigger('focus');
+        setTimeout(() => {
+            $('.modal__close').focus();
+        }, 0);
+
+        console.log('document.activeElement');
 
     }
 
@@ -137,7 +141,11 @@ $(function () {
         const currentIndex =
             focusableElements.indexOf(document.activeElement);
 
-        if (currentIndex === -1) return;
+        if (currentIndex === -1) {
+            e.preventDefault();
+            focusableElements[0].focus();
+            return;
+        }
 
         e.preventDefault();
 
