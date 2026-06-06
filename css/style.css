@@ -596,7 +596,7 @@ header {
   cursor: pointer;
 }
 .modal__close:focus:not(:focus-visible) {
-  outline: none;
+  outline: none !important;
 }
 .modal__close::before, .modal__close::after {
   content: "";

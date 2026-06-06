@@ -69,10 +69,8 @@ $(function () {
         // 背景を操作不可にする
         $('#mainContent').attr('inert', '');
         setTimeout(() => {
-            $('.modal__close').focus();
+            $('#worksModal').focus();
         }, 0);
-
-        console.log('document.activeElement');
 
     }
 

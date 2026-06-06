@@ -73,10 +73,10 @@
         width: 30px;
         height: 30px;
         cursor: pointer;
-                    
+
 
         &:focus:not(:focus-visible) {
-            outline: none;
+            outline: none !important;
         }
 
         &::before,
