@@ -4,7 +4,19 @@
     &__message {
         font-size: 16px;
         line-height: 1.8;
-
+    }
+    p{
+        padding-bottom: 8px;
+    }
+    &__content-title{
+        font-weight: 400;
+        padding-bottom: 6px;
+    }
+    &__content-list{
+        padding-left: 18px;
+    }
+    &__content-item{
+        list-style: disc;
     }
 }
 

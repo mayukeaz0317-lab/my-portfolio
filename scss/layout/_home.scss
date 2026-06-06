@@ -22,6 +22,7 @@
     }
 
     &__name {
+        font-weight: 300;
         font-size: 24px;
         margin-bottom: 12px;
     }
@@ -42,11 +43,5 @@
     &__cat {
         margin-left: 64px;
         margin-bottom: 24px;
-    }
-
-    h3 {
-        margin-bottom: 16px;
-        margin-left: 16px;
-        text-align: left;
     }
 }

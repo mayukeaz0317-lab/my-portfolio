@@ -269,6 +269,7 @@ header {
   padding-bottom: 32px;
 }
 .about__name {
+  font-weight: 300;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -286,15 +287,23 @@ header {
   margin-left: 64px;
   margin-bottom: 24px;
 }
-.about h3 {
-  margin-bottom: 16px;
-  margin-left: 16px;
-  text-align: left;
-}
 
 .service__message {
   font-size: 16px;
   line-height: 1.8;
+}
+.service p {
+  padding-bottom: 8px;
+}
+.service__content-title {
+  font-weight: 400;
+  padding-bottom: 6px;
+}
+.service__content-list {
+  padding-left: 18px;
+}
+.service__content-item {
+  list-style: disc;
 }
 
 .works {
