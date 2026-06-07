@@ -7,13 +7,13 @@
 .modal {
     display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .7);
 
     justify-content: center;
     align-items: center;
 
     z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
 
     &__title {
         margin-bottom: 12px;
@@ -32,38 +32,29 @@
         line-height: 1.8;
     }
 
-    &__link {
-        display: inline-flex;
-        padding: 12px 20px;
+    &__btn-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
 
-        border-radius: 999px;
-
-        background: #111;
-
-        color: #fff;
-
-        transition: transform .3s;
-
-        @media (hover: hover) and (pointer: fine) {
-
-            &:hover {
-                transform: translateY(-2px);
-            }
+        @include mq-567 {
+            flex-direction: column;
+            gap: 12px;
         }
-
     }
 
-    &__content {
-        background: #fff;
 
-        width: min(90%, 600px);
+    &__content {
+
+        position: relative;
+
+        box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+        border-radius: 16px;
+        background: #fff;
 
         padding: 40px;
 
-        position: relative;
-        border-radius: 16px;
-
-        box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+        width: min(90%, 600px);
 
         @include mq-567 {
             padding: 20px;
@@ -74,9 +65,9 @@
         position: absolute;
         top: 20px;
         right: 20px;
+        cursor: pointer;
         width: 30px;
         height: 30px;
-        cursor: pointer;
 
 
         &:focus:not(:focus-visible) {
@@ -85,13 +76,13 @@
 
         &::before,
         &::after {
-            content: "";
             position: absolute;
             top: 50%;
             left: 50%;
+            background-color: #111;
             width: 24px;
             height: 2px;
-            background-color: #111;
+            content: "";
 
         }
 

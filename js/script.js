@@ -52,7 +52,7 @@ $(function () {
 
     }
 
-    function openModal(title, label, points, url) {
+    function openModal(title, label, points, url, github) {
 
         $('.modal__title').text(title);
 
@@ -62,7 +62,13 @@ $(function () {
 
         $('.modal__points-list').html(html);
 
-        $('.modal__link').attr('href', url);
+        $('.js-site-link').attr('href', url);
+
+        if (github) {
+            $('.js-github').attr('href', github).show();
+        } else {
+            $('.js-github').hide();
+        }
 
         $('#worksModal').addClass('is-open');
 
@@ -85,12 +91,14 @@ $(function () {
         const label = $(this).data('label');
         const points = $(this).data('points').split('|')
         const url = $(this).data('url');
+        const github = $(this).data('github');
 
         openModal(
             title,
             label,
             points,
-            url
+            url,
+            github
         );
 
     });

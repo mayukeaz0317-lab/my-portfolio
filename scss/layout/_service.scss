@@ -4,9 +4,10 @@
     &__message {
         font-size: 16px;
         line-height: 1.8;
+        margin-bottom: 8px;
     }
     p{
-        padding-bottom: 8px;
+        padding-bottom: 6px;
     }
     &__content-title{
         font-weight: 400;
@@ -14,6 +15,7 @@
     }
     &__content-list{
         padding-left: 18px;
+        margin-bottom: 20px;
     }
     &__content-item{
         list-style: disc;

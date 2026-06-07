@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -27,11 +27,11 @@
             <div class="container">
                 <div class="header">
                     <h1 class="header__logo"><a href="index.html">Keita`s Portfolio</a></h1>
-                    <div class="header__hamburger">
+                    <button class="header__hamburger" aria-label="メニューを開く">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                     <nav class="header__menu">
                         <ul>
                             <li><a href="#about">About</a></li>
@@ -97,10 +97,12 @@
             <section class="service l-section" id="service">
                 <div class="container">
                     <h2 class="heading">Service</h2>
-                    <p class="service__message">コーディング業務を専門としております。</p>
-                    <p>デザインカンプをもとに、HTML / CSS（Sass）/ JavaScript / jQuery を用いたWebサイトのコーディングに対応しております。</p>
-                    <p>レスポンシブ対応はもちろん、BEMやFLOCSSを活用した保守性の高い設計、アクセシビリティに配慮したマークアップを意識して制作しています。</p>
-                    <p>また、WordPressオリジナルテーマ制作にも対応しており、静的コーディングからWordPress化まで一貫して担当可能です。</p>
+                    <div class="about__message">
+                        <p>コーディング業務を専門としております。</p>
+                        <p>デザインカンプをもとに、HTML / CSS（Sass）/ JavaScript / jQuery を用いたWebサイトのコーディングに対応しております。</p>
+                        <p>レスポンシブ対応はもちろん、BEMやFLOCSSを活用した保守性の高い設計、アクセシビリティに配慮したマークアップを意識して制作しています。</p>
+                        <p>また、WordPressオリジナルテーマ制作にも対応しており、静的コーディングからWordPress化まで一貫して担当可能です。</p>
+                    </div>
                     <h3 class="service__content-title">【対応内容】</h3>
                     <ul class="service__content-list">
                         <li class="service__content-item">デザインカンプからのコーディング</li>
@@ -110,6 +112,7 @@
                         <li class="service__content-item">JavaScript / jQueryによるUI実装</li>
                         <li class="service__content-item">Git / GitHubを用いたバージョン管理</li>
                     </ul>
+                    <a href="https://github.com/mayukeaz0317-lab?tab=repositories" class="btn">Githubを見る</a>
                 </div>
             </section>
             <section class="works l-section" id="works">
@@ -118,8 +121,9 @@
                     <ul class="works__list">
                         <li class="works__item">
                             <button type="button" class="works__card" data-title="Web制作会社" data-label="自主制作  架空サイト"
-                                data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|FLOCSSによるCSS設計|アクセシビリティ対応|フォーカストラップ実装|Escキー操作|フォーカス復帰"
-                                data-url="https://keitahiramatsu.tech/pon-design/">
+                                data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|FLOCSSによるCSS設計|アクセシビリティ対応|ARIA属性による状態管理|フォーカストラップ実装|キーボード操作対応"
+                                data-url="https://keitahiramatsu.tech/pon-design/"
+                                data-github="https://github.com/mayukeaz0317-lab/pon-design">
                                 <div class="works__img">
                                     <img src="images/pon-design.jpg" alt="Web制作会社ののホームページのトップページ" width="923"
                                         height="531" loading="lazy" decoding="async">
@@ -129,7 +133,7 @@
                         </li>
                         <li class="works__item">
                             <button type="button" class="works__card" data-title="ミュージックスクール" data-label="自主制作  架空サイト"
-                                data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|BEMによるCSS設計|カスタム投稿・ループ処理実装|テンプレート共通化"
+                                data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|BEMによるCSS設計|ACF実装|カスタム投稿・ループ処理実装|テンプレート共通化"
                                 data-url="https://keitahiramatsu.tech/music-school/">
                                 <div class="works__img">
                                     <img src="images/screenshot.jpg" alt="ミュージックスクールのホームページのファーストビュー" width="400"
@@ -229,7 +233,10 @@
             <p class="modal__label"></p>
             <h3 class="modal__points-title">実装内容</h3>
             <ul class="modal__points-list"></ul>
-            <a href="" class="modal__link" target="_blank" rel="noopener noreferrer">サイトを見る →</a>
+            <div class="modal__btn-wrap">
+                <a href="" class="btn js-site-link" target="_blank" rel="noopener noreferrer">サイトを見る →</a>
+                <a href="" class="btn js-github" target="_blank" rel="noopener noreferrer">GitHubでコードを見る →</a>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
