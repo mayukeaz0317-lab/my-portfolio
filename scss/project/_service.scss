@@ -1,13 +1,16 @@
 @use "../foundation/mixin" as *;
 
-.service {
+.p-service {
     &__message {
         font-size: 16px;
         line-height: 1.8;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
     p{
         padding-bottom: 6px;
+        @include mq-567{
+            padding-bottom: 0;
+        }
     }
     &__content-title{
         font-weight: 400;
@@ -15,7 +18,7 @@
     }
     &__content-list{
         padding-left: 18px;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     &__content-item{
         list-style: disc;

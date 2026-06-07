@@ -1,10 +1,10 @@
 $(function () {
-    $('.header__hamburger').on('click', function () {
+    $('.js-menu-toggle').on('click', function () {
         console.log('click')
         $(this).toggleClass('active')
-        $('.header__menu ul').toggleClass('open');
+        $('.js-menu-target').toggleClass('open');
     });
-    const $inner = $('.fv__inner');
+    const $inner = $('.js-fv-inner');
     const speed = 1000;    // アニメーション速度
     const interval = 4000; // 次のスライドまでの待ち時間
     let isAnimating = false;
@@ -25,7 +25,7 @@ $(function () {
             $(this).css({
                 transition: 'none',
                 transform: 'translateX(0)'
-            }).append($(this).children('.fv__item').first());
+            }).append($(this).children('.js-fv-item').first());
             isAnimating = false;
         });
     }
@@ -54,13 +54,13 @@ $(function () {
 
     function openModal(title, label, points, url, github) {
 
-        $('.modal__title').text(title);
+        $('.js-modal-title').text(title);
 
-        $('.modal__label').text(label);
+        $('.js-modal-label').text(label);
 
         const html = points.map(point => `<li>${point}</li>`).join('');
 
-        $('.modal__points-list').html(html);
+        $('.js-modal-points').html(html);
 
         $('.js-site-link').attr('href', url);
 
@@ -82,7 +82,7 @@ $(function () {
 
     }
 
-    $('.works__card').on('click', function () {
+    $('.js-works-btn').on('click', function () {
 
         // フォーカス復帰用
         lastFocusedElement = this;
@@ -103,7 +103,7 @@ $(function () {
 
     });
 
-    $('.modal__close').on('click', function () {
+    $('.js-modal-close').on('click', function () {
         closeModal();
     });
 

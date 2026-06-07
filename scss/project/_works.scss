@@ -1,5 +1,5 @@
 @use "../foundation/mixin" as *;
-.works {
+.p-works {
     background-color: #f5f5f5;
 
     &__list {
@@ -27,7 +27,7 @@
                 transform: translateY(-6px);
                 box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 
-                .works__img {
+                .p-works__img {
                     &::before {
                         opacity: 1;
                     }

@@ -22,57 +22,57 @@
 </head>
 
 <body>
-    <header>
+    <header class="p-header">
         <div class="l-inner">
-            <div class="header">
-                <h1 class="header__logo"><a href="index.html">Keita`s Portfolio</a></h1>
-                <button class="header__hamburger" aria-label="メニューを開く">
+            <div class="p-header__wrap">
+                <h1 class="p-header__logo"><a href="index.html">Keita`s Portfolio</a></h1>
+                <button class="p-header__hamburger js-menu-toggle" aria-label="メニューを開く">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <nav class="header__menu">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#works">Works</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <nav class="p-header__global-nav">
+                    <ul class="p-header__global-list js-menu-target">
+                        <li class="p-header__global-item"><a href="#about" class="p-header__global-link">About</a></li>
+                        <li class="p-header__global-item"><a href="#service" class="p-header__global-link">Service</a></li>
+                        <li class="p-header__global-item"><a href="#works" class="p-header__global-link">Works</a></li>
+                        <li class="p-header__global-item"><a href="#contact" class="p-header__global-link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <main id="mainContent">
-        <section class="fv">
-            <div class="fv__inner">
-                <div class="fv__item">
+        <section class="p-fv">
+            <div class="p-fv__inner js-fv-inner">
+                <div class="p-fv__item js-fv-item">
                     <img class="c-img" src="./images/fv-1.jpg" alt="プログラミング">
-                    <div class="fv__text">
+                    <div class="p-fv__text">
                         <h2 class="fv__title">丁寧なコーディング</h2>
-                        <p class="fv__desc">デザインカンプをもとに、HTML / CSS / Sass / jQuery
+                        <p class="p-fv__desc">デザインカンプをもとに、HTML / CSS / Sass / jQuery
                             を用いたレスポンシブ対応・ピクセルパーフェクトなコーディングを行います。</p>
                     </div>
                 </div>
-                <div class="fv__item">
+                <div class="p-fv__item js-fv-item">
                     <picture>
                         <source srcset="./images/fv-2--sp.jpg" media="(max-width: 567px)">
                         <img class="c-img" src="./images/fv-2.jpg" alt="WordPress">
                     </picture>
-                    <div class="fv__text">
-                        <h2 class="fv__title">WordPressサイト制作</h2>
-                        <p class="fv__desc">デザインカンプをもとに、
+                    <div class="p-fv__text">
+                        <h2 class="p-fv__title">WordPressサイト制作</h2>
+                        <p class="p-fv__desc">デザインカンプをもとに、
                             WordPressのオリジナルテーマ制作から
                             既存テーマを活用したサイト構築まで対応しております。</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about l-section" id="about">
+        <section class="p-about l-section" id="about">
             <div class="l-inner">
                 <h2 class="c-heading">About</h2>
-                <div class="about__wrapper">
-                    <div class="about__message">
-                        <h3 class="about__name">平松慶太</h3>
+                <div class="p-about__wrap">
+                    <div class="p-about__message">
+                        <h3 class="p-about__name">平松慶太</h3>
                         <p>愛媛県工学部一回生です。</p>
                         <p>HTML / CSS（Sass）/ JavaScript /
                             jQueryを用いたコーディングを中心に学習しており、デザインカンプをもとにしたレスポンシブ対応やWordPressオリジナルテーマ制作に取り組んでいます。</p>
@@ -80,108 +80,108 @@
                         <p>一つひとつの制作に誠実に向き合い、丁寧なコミュニケーションと責任感を持って対応いたします。</p>
                         <p>犬2匹、猫1匹も暮らしています。</p>
                     </div>
-                    <div class="about__imgs">
-                        <figure class="about__cat"><img class="c-img" src="images/IMG_2916.webp" alt="机の上でくつろぐ白色の猫"
+                    <div class="p-about__imgs">
+                        <figure class="p-about__cat"><img class="c-img" src="images/IMG_2916.webp" alt="机の上でくつろぐ白色の猫"
                                 width="3024" height="4032" decoding="async" loading="lazy"></figure>
-                        <div class="about__dogs">
-                            <figure class="about__dog"><img class="c-img" src="images/IMG_2688.webp" alt="横になって眠っている柴犬の横顔"
+                        <div class="p-about__dogs">
+                            <figure class="p-about__dog"><img class="c-img" src="images/IMG_2688.webp" alt="横になって眠っている柴犬の横顔"
                                     width="4032" height="3024" decoding="async" loading="lazy"></figure>
-                            <figure class="about__dog"><img class="c-img" src="images/IMG_3243.webp" alt="毛布に包まって眠っている柴犬"
+                            <figure class="p-about__dog"><img class="c-img" src="images/IMG_3243.webp" alt="毛布に包まって眠っている柴犬"
                                     width="3088" height="2316" decoding="async" loading="lazy"></figure>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="service l-section" id="service">
+        <section class="p-service l-section" id="service">
             <div class="l-inner">
                 <h2 class="c-heading">Service</h2>
-                <div class="about__message">
+                <div class="p-service__message">
                     <p>コーディング業務を専門としております。</p>
                     <p>デザインカンプをもとに、HTML / CSS（Sass）/ JavaScript / jQuery を用いたWebサイトのコーディングに対応しております。</p>
                     <p>レスポンシブ対応はもちろん、BEMやFLOCSSを活用した保守性の高い設計、アクセシビリティに配慮したマークアップを意識して制作しています。</p>
                     <p>また、WordPressオリジナルテーマ制作にも対応しており、静的コーディングからWordPress化まで一貫して担当可能です。</p>
                 </div>
-                <h3 class="service__content-title">【対応内容】</h3>
-                <ul class="service__content-list">
-                    <li class="service__content-item">デザインカンプからのコーディング</li>
-                    <li class="service__content-item">レスポンシブ対応</li>
-                    <li class="service__content-item">WordPressオリジナルテーマ制作</li>
-                    <li class="service__content-item">既存WordPressサイトの改修</li>
-                    <li class="service__content-item">JavaScript / jQueryによるUI実装</li>
-                    <li class="service__content-item">Git / GitHubを用いたバージョン管理</li>
+                <h3 class="p-service__content-title">【対応内容】</h3>
+                <ul class="p-service__content-list">
+                    <li class="p-service__content-item">デザインカンプからのコーディング</li>
+                    <li class="p-service__content-item">レスポンシブ対応</li>
+                    <li class="p-service__content-item">WordPressオリジナルテーマ制作</li>
+                    <li class="p-service__content-item">既存WordPressサイトの改修</li>
+                    <li class="p-service__content-item">JavaScript / jQueryによるUI実装</li>
+                    <li class="p-service__content-item">Git / GitHubを用いたバージョン管理</li>
                 </ul>
                 <a href="https://github.com/mayukeaz0317-lab?tab=repositories" class="c-btn">Githubを見る</a>
             </div>
         </section>
-        <section class="works l-section" id="works">
+        <section class="p-works l-section" id="works">
             <div class="l-inner">
                 <h2 class="c-heading">Works</h2>
-                <ul class="works__list">
-                    <li class="works__item">
-                        <button type="button" class="works__card" data-title="Web制作会社" data-label="自主制作  架空サイト"
+                <ul class="p-works__list">
+                    <li class="p-works__item">
+                        <button type="button" class="p-works__card js-works-btn" data-title="Web制作会社" data-label="自主制作  架空サイト"
                             data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|FLOCSSによるCSS設計|アクセシビリティ対応|ARIA属性による状態管理|フォーカストラップ実装|キーボード操作対応"
                             data-url="https://keitahiramatsu.tech/pon-design/"
                             data-github="https://github.com/mayukeaz0317-lab/pon-design">
-                            <div class="works__img">
+                            <div class="p-works__img">
                                 <img class="c-img" src="images/pon-design.jpg" alt="Web制作会社ののホームページのトップページ" width="923"
                                     height="531" loading="lazy" decoding="async">
                             </div>
-                            <h3 class="works__title">Web制作会社</h3>
+                            <h3 class="p-works__title">Web制作会社</h3>
                         </button>
                     </li>
-                    <li class="works__item">
-                        <button type="button" class="works__card" data-title="ミュージックスクール" data-label="自主制作  架空サイト"
+                    <li class="p-works__item">
+                        <button type="button" class="p-works__card js-works-btn" data-title="ミュージックスクール" data-label="自主制作  架空サイト"
                             data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|BEMによるCSS設計|ACF実装|カスタム投稿・ループ処理実装|テンプレート共通化"
                             data-url="https://keitahiramatsu.tech/music-school/">
-                            <div class="works__img">
+                            <div class="p-works__img">
                                 <img class="c-img" src="images/screenshot.jpg" alt="ミュージックスクールのホームページのファーストビュー"
                                     width="400" height="250" loading="lazy" decoding="async">
                             </div>
-                            <h3 class="works__title">ミュージックスクール</h3>
+                            <h3 class="p-works__title">ミュージックスクール</h3>
                         </button>
                     </li>
-                    <li class="works__item">
-                        <button type="button" class="works__card" data-title="建築会社" data-label="自主制作  架空サイト"
+                    <li class="p-works__item">
+                        <button type="button" class="p-works__card js-works-btn" data-title="建築会社" data-label="自主制作  架空サイト"
                             data-points="JavaScriptによるスライドショー実装|レスポンシブ対応|マイナスマージンを用いた重なりレイアウト|ピクセルパーフェクトを意識したコーディング"
                             data-url="https://building-company.pages.dev/">
-                            <div class="works__img">
+                            <div class="p-works__img">
                                 <img class="c-img" src="images/building-company.jpg" alt="建築会社のホームページのファーストビュー"
                                     width="400" height="250" loading="lazy" decoding="async">
                             </div>
-                            <h3 class="works__title">建築会社</h3>
+                            <h3 class="p-works__title">建築会社</h3>
                         </button>
                     </li>
-                    <li class="works__item">
-                        <button type="button" class="works__card" data-title="動物病院" data-label="自主制作  架空サイト"
+                    <li class="p-works__item">
+                        <button type="button" class="p-works__card js-works-btn" data-title="動物病院" data-label="自主制作  架空サイト"
                             data-points="デザインカンプからのコーディング|レスポンシブ対応|ピクセルパーフェクトを意識した実装|レイアウト・余白の再現"
                             data-url="https://animal-hospital.pages.dev/">
-                            <div class="works__img">
+                            <div class="p-works__img">
                                 <img class="c-img" src="images/animal-hospital.jpg" alt="動物病院のホームページのファーストビュー"
                                     width="400" height="250" loading="lazy" decoding="async">
                             </div>
-                            <h3 class="works__title">動物病院</h3>
+                            <h3 class="p-works__title">動物病院</h3>
                         </button>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="contact l-section" id="contact">
+        <section class="p-contact l-section" id="contact">
             <div class="l-inner">
                 <h2 class="c-heading">Contact</h2>
-                <div class="contact__message">
+                <div class="p-contact__message">
                     <p>お問い合わせはこちらのフォーム、またはSNSのダイレクトメッセージからお気軽にご連絡ください。</p>
                 </div>
-                <form action="https://formspree.io/f/xgonnjpw" method="post" class="contact__form">
-                    <div class="contact__group">
+                <form action="https://formspree.io/f/xgonnjpw" method="post" class="p-contact__form">
+                    <div class="p-contact__group">
                         <label for="name">お名前</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="contact__group">
+                    <div class="p-contact__group">
                         <label for="email">メールアドレス</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="contact__group">
+                    <div class="p-contact__group">
                         <label for="message">お問い合わせ内容</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
@@ -190,48 +190,48 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="p-footer">
         <div class="l-inner">
-            <div class="footer__menu">
-                <div class="footer__logo">
+            <div class="p-footer__menu">
+                <div class="p-footer__logo">
                     <a href="index.html">Keita`s Portfolio</a>
                 </div>
-                <nav class="footer__list">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#works">Works</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <nav class="p-footer__global-nav">
+                    <ul class="p-footer__global-list">
+                        <li class="p-footer__global-item"><a href="#about" class="p-footer__global-link">About</a></li>
+                        <li class="p-footer__global-item"><a href="#service" class="p-footer__global-link">Service</a></li>
+                        <li class="p-footer__global-item"><a href="#works" class="p-footer__global-link">Works</a></li>
+                        <li class="p-footer__global-item"><a href="#contact" class="p-footer__global-link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-            <ul class="sns__list">
-                <li class="sns__item">
-                    <a href="https://x.com/@bws3YBDjqq6161" target="_blank" rel="noopener noreferrer" class="sns__link"
+            <ul class="p-sns__list">
+                <li class="p-sns__item">
+                    <a href="https://x.com/@bws3YBDjqq6161" target="_blank" rel="noopener noreferrer" class="p-sns__link"
                         aria-label="Xのアカウント">
                         <i class="fa-brands fa-square-x-twitter"></i>
                     </a>
                 </li>
-                <li class="sns__item">
+                <li class="p-sns__item">
                     <a href="https://github.com/mayukeaz0317-lab" target="_blank" rel="noopener noreferrer"
-                        class="sns__link" aria-label="githubのアカウント">
+                        class="p-sns__link" aria-label="githubのアカウント">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
             </ul>
         </div>
-        <div class="copyright">
+        <div class="p-footer__copyright">
             <p>&copy; 2026 Keita Hiramatsu.</p>
         </div>
     </footer>
-    <div class="modal" id="worksModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
-        <div class="modal__content">
-            <button type="button" class="modal__close" aria-label="モーダルを閉じる"></button>
-            <h2 id="modalTitle" class="modal__title"></h2>
-            <p class="modal__label"></p>
-            <h3 class="modal__points-title">実装内容</h3>
-            <ul class="modal__points-list"></ul>
-            <div class="modal__btn-wrap">
+    <div class="p-modal" id="worksModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+        <div class="p-modal__content">
+            <button type="button" class="p-modal__close js-modal-close" aria-label="モーダルを閉じる"></button>
+            <h2 id="modalTitle" class="modal__title js-modal-title"></h2>
+            <p class="p-modal__label js-modal-label"></p>
+            <h3 class="p-modal__points-title">実装内容</h3>
+            <ul class="p-modal__points-list js-modal-points"></ul>
+            <div class="p-modal__btn-wrap">
                 <a href="" class="c-btn js-site-link" target="_blank" rel="noopener noreferrer">サイトを見る →</a>
                 <a href="" class="c-btn js-github" target="_blank" rel="noopener noreferrer">GitHubでコードを見る →</a>
             </div>

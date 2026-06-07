@@ -1,10 +1,7 @@
 @use "../foundation/mixin" as *;
 
-.modal.is-open {
-    display: flex;
-}
 
-.modal {
+.p-modal {
     display: none;
     position: fixed;
 
@@ -94,8 +91,7 @@
             transform: translate(-50%, -50%) rotate(-45deg);
         }
     }
-}
-
-.is-fixed {
-    overflow: hidden;
+    &.is-open{
+        display: flex;
+    }
 }

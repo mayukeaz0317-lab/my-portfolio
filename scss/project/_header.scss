@@ -9,11 +9,13 @@ header {
     background-color: rgba(250, 250, 250);
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+.p-header {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
 
     &__logo {
         font-size: 24px;
@@ -84,7 +86,8 @@ header {
     }
 
 
-    &__menu ul {
+
+    &__global-list {
         list-style: none;
         display: flex;
         gap: 60px;
@@ -101,14 +104,15 @@ header {
             background-color: white;
             transition: all 0.5s;
             z-index: 3;
-
-            &.open {
-                right: 0;
-            }
         }
+
+        &.open {
+            right: 0;
+        }
+
     }
 
-    &__menu li {
+    &__global-item {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -122,17 +126,16 @@ header {
         }
     }
 
-    &__menu {
+    &__global-link {
         @media (hover: hover) and (pointer: fine) {
-          a:hover {
-            border-bottom: 1px solid #333;
-          }
+            &:hover {
+                border-bottom: 1px solid #333;
+            }
         }
     }
-    }
+}
 
-    .menu-img {
-        width: 39px;
-        height: 39px;
-    }
-
+.menu-img {
+    width: 39px;
+    height: 39px;
+}
