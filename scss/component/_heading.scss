@@ -1,0 +1,11 @@
+@use "../foundation/mixin" as *;;
+.c-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 64px;
+
+    @include mq-567 {
+        margin-bottom: 48px;
+    }
+}

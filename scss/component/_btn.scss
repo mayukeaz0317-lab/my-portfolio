@@ -1,0 +1,27 @@
+@use "../foundation/mixin" as *;
+.c-btn {
+    display: inline-flex;
+
+    transition: transform .3s;
+
+    border-radius: 999px;
+
+    background: #111;
+    padding: 12px 20px;
+
+    color: #fff;
+    font-size: 16px;
+
+    @include mq-567 {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+}

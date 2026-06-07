@@ -27,13 +27,13 @@
         margin-bottom: 12px;
     }
 
-    &__pets {
+    &__dogs {
         display: flex;
         gap: 16px;
     }
 
     &__cat,
-    &__pet {
+    &__dog {
         border-radius: 50%;
         overflow: hidden;
         height: 150px;

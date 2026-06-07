@@ -1,0 +1,10 @@
+@use "../foundation/mixin" as *;
+.l-inner {
+    max-width: 1080px;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @include mq-sp {
+        padding: 0 20px;
+    }
+}
