@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="./fonts/noto-sans-jp-v56-japanese_latin-300.woff2" as="font" type="font/woff2"
+        crossorigin>
+
+    <link rel="preload" href="./fonts/lato-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
@@ -34,9 +32,11 @@
                 <nav class="p-header__global-nav">
                     <ul class="p-header__global-list js-menu-target">
                         <li class="p-header__global-item"><a href="#about" class="p-header__global-link">About</a></li>
-                        <li class="p-header__global-item"><a href="#service" class="p-header__global-link">Service</a></li>
+                        <li class="p-header__global-item"><a href="#service" class="p-header__global-link">Service</a>
+                        </li>
                         <li class="p-header__global-item"><a href="#works" class="p-header__global-link">Works</a></li>
-                        <li class="p-header__global-item"><a href="#contact" class="p-header__global-link">Contact</a></li>
+                        <li class="p-header__global-item"><a href="#contact" class="p-header__global-link">Contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -84,10 +84,12 @@
                         <figure class="p-about__cat"><img class="c-img" src="images/IMG_2916.webp" alt="机の上でくつろぐ白色の猫"
                                 width="300" height="400" decoding="async" loading="lazy"></figure>
                         <div class="p-about__dogs">
-                            <figure class="p-about__dog"><img class="c-img" src="images/IMG_2688.webp" alt="横になって眠っている柴犬の横顔"
-                                    width="400" height="300" decoding="async" loading="lazy"></figure>
-                            <figure class="p-about__dog"><img class="c-img" src="images/IMG_3243.webp" alt="毛布に包まって眠っている柴犬"
-                                    width="400" height="300" decoding="async" loading="lazy"></figure>
+                            <figure class="p-about__dog"><img class="c-img" src="images/IMG_2688.webp"
+                                    alt="横になって眠っている柴犬の横顔" width="400" height="300" decoding="async" loading="lazy">
+                            </figure>
+                            <figure class="p-about__dog"><img class="c-img" src="images/IMG_3243.webp"
+                                    alt="毛布に包まって眠っている柴犬" width="400" height="300" decoding="async" loading="lazy">
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -119,7 +121,8 @@
                 <h2 class="c-heading">Works</h2>
                 <ul class="p-works__list">
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="Web制作会社" data-label="自主制作  架空サイト"
+                        <button type="button" class="p-works__card js-works-btn" data-title="Web制作会社"
+                            data-label="自主制作  架空サイト"
                             data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|FLOCSSによるCSS設計|アクセシビリティ対応|ARIA属性による状態管理|フォーカストラップ実装|キーボード操作対応"
                             data-url="https://keitahiramatsu.tech/pon-design/"
                             data-github="https://github.com/mayukeaz0317-lab/pon-design">
@@ -131,7 +134,8 @@
                         </button>
                     </li>
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="ミュージックスクール" data-label="自主制作  架空サイト"
+                        <button type="button" class="p-works__card js-works-btn" data-title="ミュージックスクール"
+                            data-label="自主制作  架空サイト"
                             data-points="WordPressオリジナルテーマ制作|レスポンシブ対応|BEMによるCSS設計|ACF実装|カスタム投稿・ループ処理実装|テンプレート共通化"
                             data-url="https://keitahiramatsu.tech/music-school/">
                             <div class="p-works__img">
@@ -142,7 +146,8 @@
                         </button>
                     </li>
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="建築会社" data-label="自主制作  架空サイト"
+                        <button type="button" class="p-works__card js-works-btn" data-title="建築会社"
+                            data-label="自主制作  架空サイト"
                             data-points="JavaScriptによるスライドショー実装|レスポンシブ対応|マイナスマージンを用いた重なりレイアウト|ピクセルパーフェクトを意識したコーディング"
                             data-url="https://building-company.pages.dev/">
                             <div class="p-works__img">
@@ -153,7 +158,8 @@
                         </button>
                     </li>
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="動物病院" data-label="自主制作  架空サイト"
+                        <button type="button" class="p-works__card js-works-btn" data-title="動物病院"
+                            data-label="自主制作  架空サイト"
                             data-points="デザインカンプからのコーディング|レスポンシブ対応|ピクセルパーフェクトを意識した実装|レイアウト・余白の再現"
                             data-url="https://animal-hospital.pages.dev/">
                             <div class="p-works__img">
@@ -199,16 +205,18 @@
                 <nav class="p-footer__global-nav">
                     <ul class="p-footer__global-list">
                         <li class="p-footer__global-item"><a href="#about" class="p-footer__global-link">About</a></li>
-                        <li class="p-footer__global-item"><a href="#service" class="p-footer__global-link">Service</a></li>
+                        <li class="p-footer__global-item"><a href="#service" class="p-footer__global-link">Service</a>
+                        </li>
                         <li class="p-footer__global-item"><a href="#works" class="p-footer__global-link">Works</a></li>
-                        <li class="p-footer__global-item"><a href="#contact" class="p-footer__global-link">Contact</a></li>
+                        <li class="p-footer__global-item"><a href="#contact" class="p-footer__global-link">Contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <ul class="p-sns__list">
                 <li class="p-sns__item">
-                    <a href="https://x.com/@bws3YBDjqq6161" target="_blank" rel="noopener noreferrer" class="p-sns__link"
-                        aria-label="Xのアカウント">
+                    <a href="https://x.com/@bws3YBDjqq6161" target="_blank" rel="noopener noreferrer"
+                        class="p-sns__link" aria-label="Xのアカウント">
                         <i class="fa-brands fa-square-x-twitter"></i>
                     </a>
                 </li>

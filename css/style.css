@@ -4,8 +4,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/lato-v25-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-jp-300 - japanese_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/noto-sans-jp-v56-japanese_latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-jp-regular - japanese_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/noto-sans-jp-v56-japanese_latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-jp-700 - japanese_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/noto-sans-jp-v56-japanese_latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 body {
-  font-family: "Lato", "Noto Sans JP", "Yu Gothic", "YuGothic", sans-serif;
+  font-family: "Noto Sans JP", "Yu Gothic", "YuGothic", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -90,6 +122,7 @@ body {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
+  font-family: "Lato , sans-serif";
   margin-bottom: 64px;
 }
 @media screen and (max-width: 567px) {
@@ -116,6 +149,7 @@ header {
 .p-header__logo {
   font-size: 24px;
   line-height: 1.5;
+  font-family: "Lato , sans-serif";
 }
 @media screen and (max-width: 768px) {
   .p-header__logo {
@@ -191,9 +225,9 @@ header {
   right: 0;
 }
 .p-header__global-item {
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 400;
 }
 @media screen and (max-width: 768px) {
   .p-header__global-item {
@@ -235,8 +269,8 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 64px;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   list-style: none;
 }
@@ -289,7 +323,7 @@ header {
   padding-bottom: 32px;
 }
 .p-about__name {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -411,7 +445,7 @@ header {
   transform: translate(-50%, -50%) translateY(10px);
   color: #FFF;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   white-space: nowrap;
   z-index: 2;
