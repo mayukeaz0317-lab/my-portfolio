@@ -58,9 +58,7 @@ $(function () {
 
         $('.js-modal-label').text(label);
 
-        const html = points.map(point => `<li>${point}</li>`).join('');
-
-        $('.js-modal-points').html(html);
+        $('.js-modal-points').html(points);
 
         $('.js-site-link').attr('href', url);
 
@@ -89,7 +87,7 @@ $(function () {
 
         const title = $(this).data('title');
         const label = $(this).data('label');
-        const points = $(this).data('points').split('|')
+        const points = $(this).find('.js-points-data').html();
         const url = $(this).data('url');
         const github = $(this).data('github');
 
@@ -141,10 +139,7 @@ $(function () {
         if (e.key !== 'Tab') return;
 
 
-        const focusableElements = [
-            $('.modal__close').get(0),
-            $('.modal__link').get(0)
-        ];
+        const focusableElements = $('#worksModal').find('button, a').filter(':visible').toArray();
 
         const currentIndex =
             focusableElements.indexOf(document.activeElement);
