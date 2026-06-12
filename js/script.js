@@ -1,25 +1,45 @@
 $(function () {
+    /**
+     * ハンバーガーメニューの開閉（トグル）
+     */
     $('.js-menu-toggle').on('click', function () {
-        console.log('click')
         $(this).toggleClass('active')
-        $('.js-menu-target').toggleClass('open');
+        const isOpen = $(this).hasClass('active');
+        $(this).attr('aria-expanded', isOpen);
+       $('.js-menu-target').toggleClass('open', isOpen);
     });
+    /**
+     * ナビゲーションリンクをクリックした時にメニューを閉じる
+     */
+    $('.js-global-link').on('click', function () {
+        $('.js-menu-toggle').removeClass('active').attr('aria-expanded', false);
+        $('.js-menu-target').removeClass('open');
+    });
+    /**
+      * メニュー外（背景）をクリックした時にメニューを閉じる
+      */
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.js-menu-toggle, .js-menu-target').length) {
+            $('.js-menu-toggle').removeClass('active').attr('aria-expanded', false);
+            $('.js-menu-target').removeClass('open');
+        }
+    });
+    /**
+     * ファーストビュー（FV）のスライドショー設定
+     */
     const $inner = $('.js-fv-inner');
-    const speed = 1000;    // アニメーション速度
-    const interval = 4000; // 次のスライドまでの待ち時間
+    const speed = 1000;
+    const interval = 4000;
     let isAnimating = false;
-
     function moveSlide() {
         if (isAnimating) return;
         isAnimating = true;
 
-        // 1. transformで左へスライド（GPU加速）
         $inner.css({
             transition: `transform ${speed}ms ease-in-out`,
             transform: 'translateX(-50%)' // 200%幅の半分移動
         });
 
-        // 2. アニメーションが完全に終わった瞬間に発火
         $inner.one('transitionend', function () {
             // transitionを一時的に切り、位置を0に戻しつつ要素を末尾へ移動
             $(this).css({
@@ -80,8 +100,8 @@ $(function () {
 
     }
 
-    $('.js-works-btn').on('click', function () {
-
+    $('.js-works-btn').on('click', function (e) {
+        e.preventDefault();
         // フォーカス復帰用
         lastFocusedElement = this;
 

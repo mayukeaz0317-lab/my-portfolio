@@ -24,18 +24,18 @@
         <div class="l-inner">
             <div class="p-header__wrap">
                 <h1 class="p-header__logo"><a href="index.html">Keita's Portfolio</a></h1>
-                <button class="p-header__hamburger js-menu-toggle" aria-label="メニューを開く">
+                <button class="p-header__hamburger js-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <nav class="p-header__global-nav">
                     <ul class="p-header__global-list js-menu-target">
-                        <li class="p-header__global-item"><a href="#about" class="p-header__global-link">About</a></li>
-                        <li class="p-header__global-item"><a href="#service" class="p-header__global-link">Service</a>
+                        <li class="p-header__global-item js-global-link"><a href="#about" class="p-header__global-link">About</a></li>
+                        <li class="p-header__global-item js-global-link"><a href="#service" class="p-header__global-link">Service</a>
                         </li>
-                        <li class="p-header__global-item"><a href="#works" class="p-header__global-link">Works</a></li>
-                        <li class="p-header__global-item"><a href="#contact" class="p-header__global-link">Contact</a>
+                        <li class="p-header__global-item js-global-link"><a href="#works" class="p-header__global-link">Works</a></li>
+                        <li class="p-header__global-item js-global-link"><a href="#contact" class="p-header__global-link">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -76,7 +76,7 @@
                 <div class="p-about__wrap">
                     <div class="p-about__message">
                         <h3 class="p-about__name">平松慶太</h3>
-                        <p>愛媛県工学部一回生です。</p>
+                        <p>愛媛大学工学部に在籍しています。</p>
                         <p>HTML / CSS（Sass）/ JavaScript /
                             jQueryを用いたコーディングを中心に学習しており、デザインカンプをもとにしたレスポンシブ対応やWordPressオリジナルテーマ制作に取り組んでいます。</p>
                         <p>保守性・再利用性を意識したコーディングに加え、アクセシビリティやセマンティックなマークアップにも配慮し、長期的に運用しやすいサイト制作を心がけています。</p>
@@ -124,7 +124,7 @@
                 <h2 class="c-heading">Works</h2>
                 <ul class="p-works__list">
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="Web制作会社"
+                        <a href="#" role="button" class="p-works__card js-works-btn" data-title="Web制作会社"
                             data-label="自主制作  架空サイト" data-url="https://keitahiramatsu.tech/pon-design/"
                             data-github="https://github.com/mayukeaz0317-lab/pon-design">
                             <div class="p-works__img">
@@ -142,11 +142,11 @@
                                 <li>フォーカストラップ実装</li>
                                 <li>キーボード操作対応</li>
                             </ul>
-                        </button>
+                        </a>
                     </li>
 
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="ミュージックスクール"
+                        <a href="#" role="button" class="p-works__card js-works-btn" data-title="ミュージックスクール"
                             data-label="自主制作  架空サイト" data-url="https://keitahiramatsu.tech/music-school/">
                             <div class="p-works__img">
                                 <img class="c-img" src="images/screenshot.webp" alt="ミュージックスクールのホームページのファーストビュー"
@@ -162,11 +162,11 @@
                                 <li>カスタム投稿・ループ処理実装</li>
                                 <li>テンプレート共通化</li>
                             </ul>
-                        </button>
+                        </a>
                     </li>
 
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="建築会社"
+                        <a href="#" role="button" class="p-works__card js-works-btn" data-title="建築会社"
                             data-label="自主制作  架空サイト" data-url="https://building-company.pages.dev/">
                             <div class="p-works__img">
                                 <img class="c-img" src="images/building-company.webp" alt="建築会社のホームページのファーストビュー"
@@ -180,11 +180,11 @@
                                 <li>マイナスマージンを用いた重なりレイアウト</li>
                                 <li>ピクセルパーフェクトを意識したコーディング</li>
                             </ul>
-                        </button>
+                        </a>
                     </li>
 
                     <li class="p-works__item">
-                        <button type="button" class="p-works__card js-works-btn" data-title="動物病院"
+                        <a href="#" role="button" class="p-works__card js-works-btn" data-title="動物病院"
                             data-label="自主制作  架空サイト" data-url="https://animal-hospital.pages.dev/">
                             <div class="p-works__img">
                                 <img class="c-img" src="images/animal-hospital.webp" alt="動物病院のホームページのファーストビュー"
@@ -198,7 +198,7 @@
                                 <li>ピクセルパーフェクトを意識した実装</li>
                                 <li>レイアウト・余白の再現</li>
                             </ul>
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>
