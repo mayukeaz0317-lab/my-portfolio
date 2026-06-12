@@ -6,22 +6,43 @@
         line-height: 1.8;
         margin-bottom: 12px;
     }
-    p{
+
+    p {
         padding-bottom: 6px;
-        @include mq-567{
+
+        @include mq-567 {
             padding-bottom: 0;
         }
     }
-    &__content-title{
+
+    &__content-title {
         font-weight: 400;
         padding-bottom: 6px;
     }
-    &__content-list{
+
+    &__content-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         padding-left: 18px;
         margin-bottom: 24px;
     }
-    &__content-item{
+
+    &__content-item {
         list-style: disc;
     }
-}
 
+    &__status-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    &__status-group {
+        display: flex;
+    }
+    &__status-term{
+        white-space: nowrap;
+    }
+}

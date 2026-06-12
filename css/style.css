@@ -634,11 +634,26 @@ header {
   padding-bottom: 6px;
 }
 .p-service__content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding-left: 18px;
   margin-bottom: 24px;
 }
 .p-service__content-item {
   list-style: disc;
+}
+.p-service__status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.p-service__status-group {
+  display: flex;
+}
+.p-service__status-term {
+  white-space: nowrap;
 }
 
 .p-works {
