@@ -345,6 +345,16 @@ body {
   }
 }
 
+.c-cat {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  line-height: 1;
+  white-space: nowrap;
+  background-color: #eaf2f8;
+  border-radius: 12px;
+}
+
 .c-icon-x {
   width: 26px;
   height: 26px;
@@ -745,6 +755,7 @@ header {
   font-size: 16px;
   font-weight: 700;
   margin-top: 14px;
+  margin-bottom: 6px;
   color: #1a1a1a;
   text-align: left;
 }
@@ -752,6 +763,10 @@ header {
   .p-works__title {
     font-size: 15px;
   }
+}
+.p-works__cat-wrap {
+  display: flex;
+  gap: 6px;
 }
 
 .p-contact__message {

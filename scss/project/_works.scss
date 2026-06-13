@@ -102,11 +102,16 @@
         font-size: 16px;
         font-weight: 700;
         margin-top: 14px;
+        margin-bottom: 6px;
         color: #1a1a1a;
         text-align: left;
 
         @include mq-sp {
             font-size: 15px;
         }
+    }
+    &__cat-wrap{
+        display: flex;
+        gap: 6px;
     }
 }
