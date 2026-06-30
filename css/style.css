@@ -988,8 +988,10 @@ body {
 .p-modal {
   display: none;
   position: fixed;
+  overflow-y: auto;
   justify-content: center;
   align-items: center;
+  padding-block: 40px;
   z-index: 1000;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
@@ -1024,6 +1026,7 @@ body {
   border-radius: 16px;
   background: #fff;
   padding: 40px;
+  margin: auto;
   width: min(90%, 600px);
 }
 @media screen and (max-width: 567px) {

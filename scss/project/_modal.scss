@@ -4,10 +4,10 @@
 .p-modal {
     display: none;
     position: fixed;
-
+    overflow-y: auto;
     justify-content: center;
     align-items: center;
-
+    padding-block: 40px;
     z-index: 1000;
     inset: 0;
     background: rgba(0, 0, 0, .7);
@@ -42,15 +42,12 @@
 
 
     &__content {
-
         position: relative;
-
         box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
         border-radius: 16px;
         background: #fff;
-
         padding: 40px;
-
+        margin: auto;
         width: min(90%, 600px);
 
         @include mq-567 {
@@ -91,7 +88,8 @@
             transform: translate(-50%, -50%) rotate(-45deg);
         }
     }
-    &.is-open{
+
+    &.is-open {
         display: flex;
     }
 }
