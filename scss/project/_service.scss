@@ -1,131 +1,123 @@
 @use "../foundation/mixin" as *;
 
 .p-service {
-
     &__message {
-        position: relative;
+        max-width: 880px;
+        margin: 0 auto 40px;
+        padding: 32px 0;
         font-size: 16px;
-        line-height: 1.9;
-        color: #333;
-        padding: 28px 32px;
-        margin-bottom: 28px;
-        background-color: rgba(255, 255, 255, 0.86);
-        border: 1px solid #e6ecef;
-        border-left: 4px solid #7aa6a1;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        line-height: 2;
+        color: #222;
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #ddd;
 
         @include mq-sp {
-            padding: 22px 20px;
-            margin-bottom: 24px;
+            padding: 24px 0;
+            margin-bottom: 32px;
+            font-size: 15px;
+            line-height: 1.9;
         }
     }
 
     p {
-        padding-bottom: 8px;
+        margin: 0 0 10px;
 
         &:last-child {
-            padding-bottom: 0;
-        }
-
-        @include mq-567 {
-            padding-bottom: 8px;
+            margin-bottom: 0;
         }
     }
 
     &__content-title {
         position: relative;
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: 0;
-        color: #253739;
-        padding: 0 0 8px 14px;
-        margin-bottom: 12px;
+        margin: 0 0 18px;
+        padding-left: 18px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #111;
+        letter-spacing: 0.04em;
 
         &::before {
             position: absolute;
-            top: 0.6em;
+            top: 0.75em;
             left: 0;
-            width: 6px;
-            height: 6px;
+            width: 10px;
+            height: 1px;
             content: "";
-            background-color: #7aa6a1;
-            border-radius: 50%;
+            background-color: #111;
         }
     }
 
     &__content-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px 14px;
-        padding-left: 0;
-        margin-bottom: 32px;
+        gap: 0 32px;
+        padding: 0;
+        margin: 0 0 44px;
+        border-top: 1px solid #ddd;
 
         @include mq-sp {
             grid-template-columns: 1fr;
-            gap: 10px;
-            margin-bottom: 28px;
+            gap: 0;
+            margin-bottom: 36px;
         }
     }
 
     &__content-item {
         position: relative;
         list-style: none;
+        padding: 16px 0 16px 22px;
+        font-size: 15px;
         line-height: 1.7;
-        color: #334548;
-        padding: 13px 16px 13px 38px;
-        background-color: #fff;
-        border: 1px solid #e3ebed;
-        border-radius: 8px;
+        color: #222;
+        border-bottom: 1px solid #ddd;
+
         &::before {
             position: absolute;
-            top: 1.4em;
-            left: 18px;
-            width: 8px;
-            height: 8px;
+            top: 1.7em;
+            left: 0;
+            width: 6px;
+            height: 6px;
             content: "";
-            background-color: #7aa6a1;
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px rgba(122, 166, 161, 0.16);
+            border-top: 1px solid #111;
+            border-right: 1px solid #111;
+            transform: rotate(45deg);
         }
     }
 
     &__status-list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        padding: 22px 24px;
-        margin-bottom: 28px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border: 1px solid #e6ecef;
-        border-radius: 8px;
-
-        @include mq-sp {
-            padding: 18px;
-        }
+        margin: 0 0 36px;
+        padding: 0;
+        border-top: 1px solid #222;
     }
 
     &__status-group {
-        display: flex;
-        gap: 10px;
-        line-height: 1.75;
+        display: grid;
+        grid-template-columns: 9em 1fr;
+        gap: 24px;
+        padding: 18px 0;
+        border-bottom: 1px solid #ddd;
 
         @include mq-sp {
-            flex-direction: column;
-            gap: 2px;
+            grid-template-columns: 1fr;
+            gap: 4px;
+            padding: 16px 0;
         }
     }
 
     &__status-term {
-        flex-shrink: 0;
-        min-width: 7em;
-        font-weight: 500;
-        color: #253739;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.7;
+        color: #111;
+        letter-spacing: 0.03em;
         white-space: nowrap;
     }
 
     &__status-desc {
-        color: #3f5053;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #333;
     }
 }
