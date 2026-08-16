@@ -1,0 +1,60 @@
+.p-iframe-overlay {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    padding-block: 40px;
+    z-index: 1100;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+
+    &__inner {
+        position: relative;
+        margin: auto;
+    }
+
+    &__close {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+
+        &:focus:not(:focus-visible) {
+            outline: none !important;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            width: 24px;
+            height: 2px;
+            content: "";
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &__frame {
+        width: 375px;
+        height: 667px;
+        max-height: 90vh;
+        border: none;
+        display: block;
+    }
+
+    &.is-open {
+        display: flex;
+    }
+}

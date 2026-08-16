@@ -1052,4 +1052,56 @@ body {
 }
 .p-modal.is-open {
   display: flex;
+}
+
+.p-iframe-overlay {
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  padding-block: 40px;
+  z-index: 1100;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.p-iframe-overlay__inner {
+  position: relative;
+  margin: auto;
+}
+.p-iframe-overlay__close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.p-iframe-overlay__close:focus:not(:focus-visible) {
+  outline: none !important;
+}
+.p-iframe-overlay__close::before, .p-iframe-overlay__close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  width: 24px;
+  height: 2px;
+  content: "";
+}
+.p-iframe-overlay__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.p-iframe-overlay__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.p-iframe-overlay__frame {
+  width: 375px;
+  height: 667px;
+  max-height: 90vh;
+  border: none;
+  display: block;
+}
+.p-iframe-overlay.is-open {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

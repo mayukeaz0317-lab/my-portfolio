@@ -72,7 +72,7 @@ $(function () {
 
     }
 
-    function openModal(title, label, points, url, github) {
+    function openModal(title, label, points, url, github, iframeEmbed) {
 
         $('.js-modal-title').text(title);
 
@@ -80,7 +80,11 @@ $(function () {
 
         $('.js-modal-points').html(points);
 
-        $('.js-site-link').attr('href', url);
+        if (iframeEmbed) {
+            $('.js-site-link').attr('href', url).attr('data-iframe-src', url);
+        } else {
+            $('.js-site-link').attr('href', url).removeAttr('data-iframe-src');
+        }
 
         if (github) {
             $('.js-github').attr('href', github).show();
@@ -110,19 +114,53 @@ $(function () {
         const points = $(this).find('.js-points-data').html();
         const url = $(this).data('url');
         const github = $(this).data('github');
+        const iframeEmbed = $(this).data('iframe-embed');
 
         openModal(
             title,
             label,
             points,
             url,
-            github
+            github,
+            iframeEmbed
         );
 
     });
 
     $('.js-modal-close').on('click', function () {
         closeModal();
+    });
+
+    function openIframeOverlay(src) {
+        $('.js-iframe-frame').attr('src', src);
+        $('#iframeOverlay').addClass('is-open');
+    }
+
+    function closeIframeOverlay() {
+        $('#iframeOverlay').removeClass('is-open');
+        $('.js-iframe-frame').attr('src', '');
+    }
+
+    $('.js-site-link').on('click', function (e) {
+        const iframeSrc = $(this).attr('data-iframe-src');
+
+        if (iframeSrc) {
+            e.preventDefault();
+            openIframeOverlay(iframeSrc);
+        }
+
+    });
+
+    $('.js-iframe-close').on('click', function () {
+        closeIframeOverlay();
+    });
+
+    $('#iframeOverlay').on('click', function (e) {
+
+        if ($(e.target).is('#iframeOverlay')) {
+            closeIframeOverlay();
+        }
+
     });
 
     $('#worksModal').on('click', function (e) {
