@@ -24,36 +24,6 @@ $(function () {
             $('.js-menu-target').removeClass('open');
         }
     });
-    /**
-     * ファーストビュー（FV）のスライドショー設定
-     */
-    const $inner = $('.js-fv-inner');
-    const speed = 1000;
-    const interval = 4000;
-    let isAnimating = false;
-    function moveSlide() {
-        if (isAnimating) return;
-        isAnimating = true;
-
-        $inner.css({
-            transition: `transform ${speed}ms ease-in-out`,
-            transform: 'translateX(-50%)' // 200%幅の半分移動
-        });
-
-        $inner.one('transitionend', function () {
-            // transitionを一時的に切り、位置を0に戻しつつ要素を末尾へ移動
-            $(this).css({
-                transition: 'none',
-                transform: 'translateX(0)'
-            }).append($(this).children('.js-fv-item').first());
-            isAnimating = false;
-        });
-    }
-
-    // タイマーセット
-    setInterval(moveSlide, interval);
-
-
     let lastFocusedElement = null;
 
     function closeModal() {

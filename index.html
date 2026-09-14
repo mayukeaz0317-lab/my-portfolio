@@ -16,7 +16,7 @@
         crossorigin>
     <link rel="preload" href="./fonts/lato-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?v=20260914-fv">
 </head>
 
 <body>
@@ -48,29 +48,22 @@
     </header>
     <main id="mainContent">
         <section class="p-fv">
-            <div class="p-fv__inner js-fv-inner">
-                <div class="p-fv__item js-fv-item">
-                    <img class="c-img" src="./images/fv-1.webp" alt="プログラミング" fetchpriority="high" decoding="async"
-                        width="1920" height="1108">
-                    <div class="p-fv__text">
-                        <h2 class="p-fv__title">デザインを忠実に再現</h2>
-                        <p class="p-fv__desc">デザインカンプをもとに、HTML / CSS / Sass / jQuery
-                            を用いたレスポンシブ対応・ピクセルパーフェクトなコーディングを行います。</p>
-                    </div>
-                </div>
-                <div class="p-fv__item js-fv-item">
-                    <picture>
-                        <source srcset="./images/fv-2--sp.webp" media="(max-width: 567px)" fetchpriority="high"
-                            decoding="async" width="750" height="1118">
-                        <img class="c-img" src="./images/fv-2.webp" alt="WordPress" fetchpriority="high"
-                            decoding="async" width="1920" height="935">
-                    </picture>
-                    <div class="p-fv__text">
-                        <h2 class="p-fv__title">WordPressサイト制作</h2>
-                        <p class="p-fv__desc">デザインカンプをもとに、
-                            WordPressのオリジナルテーマ制作から
-                            既存テーマを活用したサイト構築まで対応しております。</p>
-                    </div>
+            <picture class="p-fv__image">
+                <img class="c-img" src="./images/fv-1.webp" alt="Web制作とWordPress実装をイメージしたデスク"
+                    fetchpriority="high" decoding="async" width="1920" height="935">
+            </picture>
+            <div class="p-fv__text">
+                <p class="p-fv__lead">制作会社様・デザイン会社様向け</p>
+                <h2 class="p-fv__title">Webコーディング・<br class="p-fv__title-break">WordPress実装を承ります</h2>
+                <p class="p-fv__desc">デザインカンプからのレスポンシブコーディング、WordPressサイト構築（オリジナルテーマ・既存テーマ）。小規模なスポット対応から継続案件まで、週20〜30時間で柔軟に稼働できます。</p>
+                <ul class="p-fv__list">
+                    <li class="p-fv__list-item">HTML / Sass / JavaScript / jQuery</li>
+                    <li class="p-fv__list-item">WordPress構築・改修</li>
+                    <li class="p-fv__list-item">実案件・保守運用の対応経験あり</li>
+                </ul>
+                <div class="p-fv__btn-wrap">
+                    <a href="#works" class="p-fv__btn">実績を見る</a>
+                    <a href="#contact" class="p-fv__btn p-fv__btn--sub">相談する</a>
                 </div>
             </div>
         </section>
@@ -81,8 +74,7 @@
                     <div class="p-about__message">
                         <h3 class="p-about__name">平松慶太</h3>
                         <p>愛媛大学工学部に在籍しています。</p>
-                        <p>HTML / CSS（Sass）/ JavaScript /
-                            jQueryを用いたコーディングを中心に学習しており、デザインカンプをもとにしたレスポンシブ対応やWordPressオリジナルテーマ制作に取り組んでいます。</p>
+                        <p>HTML / CSS（Sass）/ JavaScript / jQueryを用いたコーディングを中心に、Figmaカンプからのレスポンシブ実装、WordPressサイトの構築・修正に対応しています。</p>
                         <p>保守性・再利用性を意識したコーディングに加え、アクセシビリティやセマンティックなマークアップにも配慮し、長期的に運用しやすいサイト制作を心がけています。</p>
                         <p>一つひとつの制作に誠実に向き合い、丁寧なコミュニケーションと責任感を持って対応いたします。</p>
                         <p>犬2匹、猫1匹も暮らしています。</p>
@@ -115,7 +107,7 @@
                 <ul class="p-service__content-list">
                     <li class="p-service__content-item">デザインカンプからのコーディング</li>
                     <li class="p-service__content-item">レスポンシブ対応</li>
-                    <li class="p-service__content-item">WordPressオリジナルテーマ制作</li>
+                    <li class="p-service__content-item">WordPressサイト構築（オリジナルテーマ・既存テーマ）</li>
                     <li class="p-service__content-item">既存WordPressサイトの改修</li>
                     <li class="p-service__content-item">ACFやカスタム投稿実装</li>
                     <li class="p-service__content-item">Git / GitHubを用いたバージョン管理</li>
@@ -365,9 +357,6 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-        defer></script>
 
     <script src="js/script.js" defer></script>
     <!-- Cloudflare Web Analytics -->
